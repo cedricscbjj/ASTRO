@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+   
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+      
+      
+      <style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@700&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap');
+          
+          
+          body{
+               background-color: black;
+               
+              
+          }
+      
+          .container{
+              max-width: 700px;
+	  margin: auto;
+              
+          }
+          
+        #conclusion  {
+              font-family: 'Work Sans', sans-serif;
+color:black;
+           font-size: 70px;   
+              background-color: white;
+          }
+          
+          
+          
+          #voyage{
+              font-family: 'Palanquin Dark', sans-serif;
+color:black;
+           font-size: 40px;   
+              background-color: white;
+              
+          }
+          
+          hr{
+border: 10px solid white;
+  border-radius: 5px;              
+          }
+          h1{
+                            font-family: 'Work Sans', sans-serif;
+color:black;
+           font-size: 70px;   
+              background-color: white;
+          }
+      
+          h2{
+              font-family: 'Palanquin Dark', sans-serif;
+                         font-size: 70px;   
+color:black;
+                           background-color: white;
+ 
+          }
+          
+          p{
+                           font-family: 'Jost', sans-serif;
+ color:white;
+              font-size: 35px;
+          }
+          
+          
+          label{
+                          font-family: 'Bree Serif', serif;
+  
+              color: deeppink;
+          }
+          #phrase{
+                                         font-family: 'Jost', sans-serif;
+color:aliceblue;
+              font-size:35px;
+          }
+          
+          
+          #danger{
+               color:yellow;
+              font-family: 'Palanquin Dark', sans-serif;
+
+                            font-size:35px;
+
+          }
+          
+          
+          
+          #phraseuser{
+                            font-family: 'Palanquin Dark', sans-serif;
+                            font-size:35px;
+               color:yellow;
+
+              
+          }
+          
+          
+          
+          
+          #farawayworld{
+                                          font-size:35px;
+font-family: 'Jost', sans-serif;
+              color:white;
+          }
+          
+          #nombreannee{
+                                        font-family: 'Bree Serif', serif;
+
+              color:black;
+              
+          }
+          
+          #back{
+            
+            font-family: 'Cherry Swash', cursive;
+                        font-size:30px;
+            color: gray;
+background: linear-gradient(
+#00C9FF
+, #92FE9D);
+        }
+          
+      </style>
+      
+      
+      
+    <title>Travel travel</title>
+  </head>
+  <body>
+
+      
+      
+      <div id="container-sm">
+      <div id="back"><a href="deuxieme.html">ASTROWORLD</a> </div>
+      
+     <div class="row" >
+         
+         
+          <div class="col">
+         
+         <h1  style="font-size:8vw;"  >  LIGHTDISTANCE1.0
+  </h1>
+         <p> Vitesse de la lumière = 299 792,458 km/s, soit 1 079 252 849 km/h ..... 
+
+ </p>
+              
+                <p> Il est impossible pour notre humanité de se deplacer a la vitesse lumiere. </p> 
+              
+              <p>la sonde solaire Parker est l’objet le plus rapide créé par l’homme, l'objet se deplace à 393’044 km/h dans l'espace</p>
+         </div>
+          
+          
+          
+          
+          
+          </div>
+      
+      
+      
+      
+      <br>
+          <br>
+          <br>
+          
+          <div class="row">
+          
+<h2>Testez le rapport vitesse distance dans l'espace!</h2>          
+          
+          </div>
+          
+            <br>
+          <br>
+          <br>
+          
+      
+           <div class="row" >
+         
+         
+          <div class="col">
+           <p> la vitesse sera exprimé en kilometres heures car c'est ce qui est le plus commun pour exprimer la vitesse à l'echelle humaine </p>
+              <hr>
+                <p> <label> 393044km/h c'est tout ce dont nous sommes capables pour le moment. Mais jusqu'ou peut t-on serieusement se rendre avec cette vitesse?!
+ <select id="choixplanete">
+            <option value="andromede">Andromede</option>
+            <option value="vega">Véga</option>
+            <option value="centaure">Alpha du Centaure</option>
+        </select>    </label> </p> 
+         <br>
+              <button class="btn btn-light " onclick="veryfaraway()">
+lets go!!!    </button>
+              <br>
+         <div id="farawayworld"> A vos marques... pret... feu partez!!  </div>
+         </div>
+         
+          </div>
+      
+          
+          <hr>
+      <br>
+          <br>
+          <br>
+      
+      <div class="row" >
+         
+         
+          <div class="col">
+         
+       <p>  <label>A combien de KM/h votre vaisseau se déplace????
+        <input type="number" id="vitessespaceship" />
+    </label>
+         </p>
+         </div>
+         
+          </div>
+      
+      <br>
+      <div class="row">
+         <div id="danger">
+          
+          
+          </div>
+          
+          </div>
+      <br>
+      
+      
+      <div class="row" >
+         
+         
+          <div class="col">
+         
+         <button class="btn btn-light " onclick="goldorakgo()">
+lets go!!!    </button>
+              
+              <div id="phraseuser" >En voyageant à la vitesse constante de <div id="valeuruser"></div> </div>        
+              
+<div id="phrase"> VOUS pouvez atteindre Saturne en <div id="valeur2ouf">....</div> </div>
+<div id="phrase"> VOUS pouvez pouvez atteindre PLuton en  <div id="valeur2ouf2">...</div> </div>
+ <div id="phrase"> VOUS pouvez pouvez atteindre Mars en  <div id="valeur2ouf3">...</div> </div>
+   <div id="phrase"> VOUS pouvez pouvez atteindre le centre de la Voie lactée en  <div id="valeur2ouf4"> ....</div> </div>
+    <div id="phrase"> VOUS pouvez pouvez atteindre l'amas de galaxies de Coma en  <div id="valeur2ouf5">....</div> </div>
+ 
+         </div>
+         
+          </div>
+      
+      
+      <hr>
+          
+          <div class="row">
+          
+          <p> Allons encore plus loin! Les kilometres sont malheureusement trop petit pour decrire les distance de l'univers</p>
+          <p>1 année lumiere est egale a 9 460 730 472 580,8 KILOMETRES</p>
+          
+          
+          
+          
+          </div>
+      
+      
+         
+      
+      
+      
+         <div class="row">
+          
+          <p id="voyage"> Dites nous ou se trouve votre prochaine destination en année lumiere, ou souhaitez vous aller en vacance?
+             N'oubliez pas que techniquement vous ne pouvez pas depasser la vitesse lumiere</p>
+         
+             
+              <div>
+             
+             <p>  <label> A combien de kilometre heure votre vaisseau va voguer à traver l'espace?
+        <input type="number" id="vitessevaisseau" />
+    </label>
+         </p>
+             </div>
+            
+             
+             
+          <div>
+             
+             <p>  <label> Inscrivez la distance à partir de la Terre en année lumiere de votre destination
+        <input type="number" id="distancedestination" />
+    </label>
+         </p>
+              <button type="button" class="btn btn-warning" onclick="travelspace()">GO Galaxy EXPRESS!!!</button>
+
+              
+             </div>
+             
+             
+             
+          <div id="conclusion">
+              
+            <div> Il vous faudra <div id="nombreannee"></div> années pour atteindre votre destination! Patience! </div>  
+             
+             </div>
+        
+          </div>
+          
+          
+          
+          
+
+      
+      
+      
+      
+      
+      </div>
+      <script>
+function goldorakgo(){
+
+var vitessespaceship = document.getElementById("vitessespaceship").value;
+    var attentionerreur= document.getElementById("danger");
+
+    document.getElementById("valeuruser").innerHTML = vitessespaceship + 'kilometres par heure';
+  
+    
+    
+    if (vitessespaceship > 1079252849){
+        alert("Vous ne pouvez theoriquement pas voyager plus vite que la lumiere! votre vitesse est erronée!");
+        attentionerreur.innerHTML= 'Vous ne pouvez theoriquement pas voyager plus vite que la lumiere! votre vitesse est erronée!'
+    }
+var affichagevitship = document.getElementById("valeur2ouf");
+var affichagevitship2 = document.getElementById("valeur2ouf2");
+    var affichagevitship3 = document.getElementById("valeur2ouf3");
+var affichagevitship4 = document.getElementById("valeur2ouf4");
+var affichagevitship5 = document.getElementById("valeur2ouf5");
+    
+    
+    
+
+var calculvitship = 1300000000 / vitessespaceship ;
+var calculvitship2 = 4000000000 / vitessespaceship ;
+var calculvitship3 = 4000000000 / vitessespaceship ;
+var calculvitship4 = 4000000000 / vitessespaceship ;
+var calculvitship5 = 4000000000 / vitessespaceship ;
+    
+    
+    
+
+valeur2ouf.innerHTML = (calculvitship/24) + ' ' + 'jours' + '......soit' + ' ' + ((calculvitship/24)/365) + ' '+'années';
+    
+    
+valeur2ouf2.innerHTML = (calculvitship2/24) + ' ' + 'jours' + '.....soit' + ' ' + ((calculvitship2/24)/365) + ' ' + 'années';
+ valeur2ouf3.innerHTML = (calculvitship2/24) + ' ' + 'jours' + '.....soit' + ' ' + ((calculvitship3/24)/365) + ' ' + 'années';
+   valeur2ouf4.innerHTML = (calculvitship2/24) + ' ' + 'jours' + '.....soit' + ' ' + ((calculvitship4/24)/365) + ' ' + 'années';
+valeur2ouf5.innerHTML = (calculvitship2/24) + ' ' + 'jours' + '.....soit' + ' ' + ((calculvitship5/24)/365) + ' ' + 'années';
+
+
+    
+    
+
+}
+      
+      
+      
+      function veryfaraway(){
+          var choixdestination = document.getElementById("choixplanete").value;
+          var text;
+          switch(choixdestination){
+                case"andromede"  :
+             text="Andromede se trouve a 2.54 millions d annees lumieres, en volant constamment a la vitesse de 393044 km/h il faudrait 6.9 milliard dannees pour s y rendre... c'est cuit! meme pas en reve! "  ;
+                  break;
+                case "vega"  :
+                  text="69469.4 ans seront necessaire pour se rendre sur VEGA....";
+                  break;
+              case "centaure":
+                  text = "11667 ans seront necessaire pour se rendre  sur Proxima du centaure....";
+                  break;      
+          }
+          
+          document.getElementById("farawayworld").innerHTML = text;
+          
+      }
+      
+      
+      
+      
+      
+      
+      function travelspace(){
+          console.log('hello');
+          var vitessevaisseau = document.getElementById("vitessevaisseau").value;
+          var distancedestination = document.getElementById("distancedestination").value;
+          var tempsvoyage = (distancedestination *9460730472580,8)  / vitessevaisseau ;
+          var affichagedutemps = document.getElementById("nombreannee");
+          
+          document.getElementById("nombreannee").innerHTML = (tempsvoyage*365);
+          
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
