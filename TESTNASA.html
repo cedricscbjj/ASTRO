@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 1 picture one day </title>
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+        
+        
+        body{
+color:white;
+background-color: black;
+
+        }
+
+        h2{
+font-family: 'Secular One', sans-serif; 
+            color:aqua;
+        }
+        
+          h1{
+font-family: 'Chango', cursive;            
+              color: royalblue;
+        }
+        
+        p{
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <div class="mx-auto" style="width: 900px;">
+ <h2> Picture of the day</h2>
+    <input type="date" id="date" onchange="getDate();">
+    <h3 class="img-title" id="title"></h3>
+    <em class="date" id="pic_date"></em>
+    <img src="" alt="" id="apod_pic" class="img-fluid">
+    <p class="caption" id="caption"></p>
+ </div>
+    
+    
+   
+ 
+ 
+    <script type="text/javascript">
+ 
+        // Declaration of variables
+        var method = "GET";
+        const key =
+        "xppA9cRewd4BADS4ohtbjy1FZsxdqRBZUdmTbLgh";
+ 
+        var url =
+        "https://api.nasa.gov/planetary/apod?api_key="
+                + key + "&date=";
+        var mode = true;
+        var date;
+ 
+        // Function defination to get date from
+        // input box and supply in sendHttpRequest
+        // function
+        function getDate() {
+            date = document.getElementById("date").value;
+            console.log(date);
+            sendHttpRequest(method, url + date,
+                mode).then((data) => {
+                console.log(data);
+                update(data);
+            });
+ 
+        }
+ 
+        // Declaration of update function to
+        // display the fetched data on webpage
+        function update(data) {
+            document.getElementById("pic_date")
+                .innerHTML = data.date;
+ 
+            document.getElementById("title")
+                .innerHTML = data.title;
+ 
+            document.getElementById("apod_pic")
+                .src = data.url;
+ 
+            document.getElementById("caption")
+                .innerHTML = data.explanation;
+            return data;
+        }
+ 
+        // Send request to nasa portal to data
+        // using the XMLHttpRequest
+        function sendHttpRequest(method, url, mode) {
+            return new Promise((resolve, reject) => {
+ 
+                var req = new XMLHttpRequest();
+                req.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            var data = JSON
+                                .parse(this.response);
+                            console.log(data);
+                            resolve(data);
+                        }
+                    }
+                }
+                req.open(method, url, mode);
+                req.send();
+            });
+        }
+    </script>
+</body>
+ 
+</html>
